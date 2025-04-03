@@ -548,8 +548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1 &91673208 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc186f6b9b071ff4691e4de046060b15, type: 3}
@@ -864,8 +864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!65 &145340407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1390,8 +1390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!65 &345306928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1781,8 +1781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1 &620120856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,8 +2001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!23 &624597028
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2867,8 +2867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1 &1092725831
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,8 +3968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!65 &1430887658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4262,8 +4262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1 &1506774472
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,8 +4919,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1001 &1652190429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5276,8 +5276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1001 &1704944096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5385,8 +5385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1 &1732880556
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,8 +5613,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1 &1789313898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 54f7822c5e5a48b4da43b5e57b869c7b, type: 3}
@@ -5638,8 +5638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!65 &1789313901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5808,8 +5808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1001 &1889446140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6541,8 +6541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!65 &2056572192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6719,8 +6719,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 1550968622}
-  mainCam: {fileID: 330585543}
-  fading: {fileID: 1506774472}
+  CameraMain: {fileID: 330585543}
+  Death: {fileID: 1506774472}
 --- !u!1 &2126293184
 GameObject:
   m_ObjectHideFlags: 0
