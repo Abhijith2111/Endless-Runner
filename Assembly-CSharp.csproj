@@ -66,7 +66,7 @@
     <Compile Include="Assets\Scripts\CoinCollect.cs" />
     <Compile Include="Assets\Scripts\PlayerMovment.cs" />
     <Compile Include="Assets\Scripts\OOF.cs" />
-    <Compile Include="Assets\Scripts\MainMenuStuff.cs" />
+    <Compile Include="Assets\Scripts\MainMenuCode.cs" />
     <Compile Include="Assets\Scripts\Knowledge.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
   </ItemGroup>
