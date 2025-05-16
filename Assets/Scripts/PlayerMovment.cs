@@ -11,9 +11,11 @@ public class PlayerMovment : MonoBehaviour
     public float speedMultiplier;
     public float speedIncr;
     private float speedCount;
+    private float playerHalfHeight;
 
     [SerializeField] private Rigidbody rigidBody3D;
     [SerializeField] private float jumpForce = 10;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,11 +54,15 @@ public class PlayerMovment : MonoBehaviour
             }
         }
 
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
     }
+
+ 
+
     private void Jump()
     {
         rigidBody3D.AddForce(Vector2.up * jumpForce, ForceMode.Impulse);
