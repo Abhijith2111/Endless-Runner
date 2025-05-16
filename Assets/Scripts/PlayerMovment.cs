@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlayerMovment : MonoBehaviour
 {
 
-    public float playerSpeed = 5;
-    public float horizontalSpeed = 3;
+    public float playerSpeed = 10;
+    public float horizontalSpeed = 10;
     public float rightLimit = 6;
     public float leftLimit = -6;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,14 +26,14 @@ public class PlayerMovment : MonoBehaviour
         {
             if (this.gameObject.transform.position.z > leftLimit)
             {
-                transform.Translate(Vector3.left * Time.deltaTime);
+                transform.Translate(Vector3.left * Time.deltaTime  * playerSpeed);
             }
         }
         if (Input.GetKey(KeyCode.D))
         {
             if (this.gameObject.transform.position.z < rightLimit)
             {
-                transform.Translate(Vector3.right * Time.deltaTime);
+                transform.Translate(Vector3.right * Time.deltaTime * playerSpeed);
             }
         }
     }

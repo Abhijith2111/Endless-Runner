@@ -29,9 +29,12 @@ public class SegmentGenerator : MonoBehaviour
         xPos += -50;
         yield return new WaitForSeconds(3);
         spawnSegment = false;
+        Destroy(SegmentGen, 10f);
 
     }
 
-
-
+    private void Destroy(System.Func<IEnumerator> segmentGen, float v)
+    {
+        throw new System.NotImplementedException();
+    }
 }
