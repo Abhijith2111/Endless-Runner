@@ -7,6 +7,11 @@ public class PlayerMovment : MonoBehaviour
     public float horizontalSpeed = 10;
     public float rightLimit = 6;
     public float leftLimit = -6;
+
+    public float speedMultiplier;
+    public float speedIncr;
+    private float speedCount;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +24,13 @@ public class PlayerMovment : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward *Time.deltaTime * playerSpeed);
+        if(transform.position.x > speedCount)
+        {
+            speedCount += speedIncr;
+
+            speedIncr = speedIncr * speedMultiplier;
+            playerSpeed = playerSpeed * speedMultiplier;
+        }
 
 
 
