@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
 public class PlayerMovment : MonoBehaviour
 {
@@ -13,8 +14,10 @@ public class PlayerMovment : MonoBehaviour
     private float speedCount;
     private float playerHalfHeight;
 
-    [SerializeField] private Rigidbody rigidBody3D;
-    [SerializeField] private float jumpForce = 10;
+    [SerializeField] Rigidbody rb;
+
+    [SerializeField] float jumpForce = 400f;
+    [SerializeField] LayerMask groundMask;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -54,17 +57,23 @@ public class PlayerMovment : MonoBehaviour
             }
         }
 
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Jump();
         }
+
+
+       
     }
 
- 
-
-    private void Jump()
+    void Jump()
     {
-        rigidBody3D.AddForce(Vector2.up * jumpForce, ForceMode.Impulse);
+        float height = GetComponent<Collider>().bounds.size.y;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
+
+        rb.AddForce(Vector3.up * jumpForce);
     }
+
+
+
 }

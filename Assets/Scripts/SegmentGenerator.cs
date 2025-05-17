@@ -29,7 +29,7 @@ public class SegmentGenerator : MonoBehaviour
         xPos += -50;
         yield return new WaitForSeconds(2);
         spawnSegment = false;
-        Destroy(SegmentGen, 10f);
+        Destroy(SegmentGen, 7f);
 
     }
 
