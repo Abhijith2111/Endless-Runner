@@ -11,7 +11,18 @@ public class OOF : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         StartCoroutine(CollisionEnd());
-    }
+        if (other.CompareTag("Player"))
+        {
+            PlayerMovment player = other.GetComponent<PlayerMovment>();
+            if (!player.IsInvincible())
+            {
+               player.Death(); 
+            }
+            else
+            {
+                
+            }
+        }
 
     IEnumerator CollisionEnd()
     {

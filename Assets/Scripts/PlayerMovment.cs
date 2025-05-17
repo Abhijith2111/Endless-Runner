@@ -24,10 +24,18 @@ public class PlayerMovment : MonoBehaviour
     private bool isInvincible = false;
     private float invincibilityLeft = 0f;
 
+    // Double jump
+
+    private bool canDoubleJump = false;
+    private bool doubleJumpActive = false;
+    private float doubleJumpTimer = 0f;
+    private float doubleJumpDuration = 5f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         /*
          * Dude cant go right
          * he jumps too high
@@ -79,7 +87,33 @@ public class PlayerMovment : MonoBehaviour
                 isInvincible = false;
             }
         }
-       
+
+        isGrounded = Physics.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
+
+        // Jump input
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isGrounded)
+            {
+                Jump();
+                canDoubleJump = true;
+            }
+            else if (canDoubleJump && doubleJumpActive)
+            {
+                Jump();
+                canDoubleJump = false;
+            }
+        }
+
+        if (doubleJumpActive)
+        {
+            doubleJumpTimer -= Time.deltaTime;
+            if (doubleJumpTimer <= 0f)
+            {
+                doubleJumpActive = false;
+            }
+        }
+
     }
 
     void Jump()
@@ -88,6 +122,9 @@ public class PlayerMovment : MonoBehaviour
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
 
         rb.AddForce(Vector3.up * jumpForce);
+
+        //double jump
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 
     public void ActivateInvincibility(float duration)
@@ -110,4 +147,9 @@ public class PlayerMovment : MonoBehaviour
         }
     }
 
+    public void ActivateDoubleJump()
+    {
+        doubleJumpActive = true;
+        doubleJumpTimer = doubleJumpDuration;
+    }
 }
