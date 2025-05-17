@@ -19,6 +19,11 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float jumpForce = 50f;
     [SerializeField] LayerMask groundMask;
 
+    // invincibility
+
+    private bool isInvincible = false;
+    private float invincibilityLeft = 0f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -66,6 +71,14 @@ public class PlayerMovment : MonoBehaviour
         }
 
 
+        if (isInvincible)
+        {
+            invincibilityLeft -= Time.deltaTime;
+            if(invincibilityLeft <= 0)
+            {
+                isInvincible = false;
+            }
+        }
        
     }
 
@@ -77,6 +90,24 @@ public class PlayerMovment : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce);
     }
 
+    public void ActivateInvincibility(float duration)
+    {
+        isInvincible = true;
+        invincibilityLeft = duration;
+    }
 
+    public bool IsInvincible()
+    {
+        return isInvincible;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("InvincibilityPickup"))
+        {
+            ActivateInvincibility(5f);
+            Destroy(other.gameObject);
+        }
+    }
 
 }

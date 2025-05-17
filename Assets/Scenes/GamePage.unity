@@ -1218,15 +1218,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550968622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 45, y: 1.38, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 330585546}
   - {fileID: 1376982333}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1550968627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,13 +1243,13 @@ MonoBehaviour:
   horizontalSpeed: 10
   rightLimit: 6
   leftLimit: -6
-  speedMultiplier: 1.5
-  speedIncr: 100
+  speedMultiplier: 0
+  speedIncr: 0
   rb: {fileID: 1550968628}
   jumpForce: 50
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!54 &1550968628
 Rigidbody:
   m_ObjectHideFlags: 0

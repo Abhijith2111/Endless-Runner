@@ -8,6 +8,7 @@ public class SegmentStuff : MonoBehaviour
     void Start()
     {
         segmentGenerator = GameObject.FindObjectOfType<SegmentGenerator>();
+        SpawnObstacle();
     }
 
     private void OnTriggerExit(Collider other)
@@ -26,5 +27,8 @@ public class SegmentStuff : MonoBehaviour
     void SpawnObstacle()
     {
         int obstacelSpawnIndex = Random.Range(2, 5);
+        Transform spawnPoint = transform.GetChild(obstacelSpawnIndex).transform;
+
+        Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 }
