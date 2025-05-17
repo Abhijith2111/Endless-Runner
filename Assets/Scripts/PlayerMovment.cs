@@ -16,14 +16,17 @@ public class PlayerMovment : MonoBehaviour
 
     [SerializeField] Rigidbody rb;
 
-    [SerializeField] float jumpForce = 400f;
+    [SerializeField] float jumpForce = 50f;
     [SerializeField] LayerMask groundMask;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        /*
+         * Dude cant go right
+         * he jumps too high
+         */ 
     }
 
     
