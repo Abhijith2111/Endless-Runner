@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PlayerMovment.cs" />
     <Compile Include="Assets\Scripts\OOF.cs" />
     <Compile Include="Assets\Scripts\MainMenuCode.cs" />
+    <Compile Include="Assets\Scripts\SegmentStuff.cs" />
     <Compile Include="Assets\Scripts\Knowledge.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Timer.cs" />

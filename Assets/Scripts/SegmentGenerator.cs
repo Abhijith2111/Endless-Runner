@@ -1,40 +1,21 @@
-using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
-public class SegmentGenerator : MonoBehaviour
-{
-    public GameObject[] segment;
+public class SegmentGenerator : MonoBehaviour{
 
+    public GameObject groundTile;
+    Vector3 nextSpawnPoint;
 
-    [SerializeField] int xPos = 50;
-    [SerializeField] bool spawnSegment = false;
-    [SerializeField] int segmentNum;
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Update()
+    public void SpawnTile()
     {
-        if(spawnSegment == false)
+        GameObject temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        nextSpawnPoint = temp.transform.GetChild(1).transform.position;
+    }
+
+    void Start (){
+        for (int i = 0; i < 15; i++)
         {
-            spawnSegment = true;
-            StartCoroutine(SegmentGen());
+            SpawnTile();
         }
-        
-    }
-
-    IEnumerator SegmentGen()
-    {
-        segmentNum = Random.Range(0, 3);
-        Instantiate(segment[segmentNum], new Vector3(xPos, 0, 0), Quaternion.identity);
-        xPos += -50;
-        yield return new WaitForSeconds(2);
-        spawnSegment = false;
-        Destroy(SegmentGen, 7f);
-
-    }
-
-    private void Destroy(System.Func<IEnumerator> segmentGen, float v)
-    {
-        throw new System.NotImplementedException();
     }
 }
